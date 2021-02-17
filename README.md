@@ -50,8 +50,8 @@ associée à l'écriture de la valeur de chacune des variables
         1 //  type_ud (type_ud = 1 pour Up, type_ud = -1 pour Down)
         1 //  type_io (type_io = 1 pour In, type_io = -1 pour Out)
 # //////////////////////////////////////////////////////////////////////////
-# // IMPORTANT : Pour les options à doubles barrières, la variable 
-#                type_ud n'a plus d'importance (pas besoin de la mettre à jour)
+IMPORTANT : Pour les options à doubles barrières, la variable 
+                type_ud n'a plus d'importance (pas besoin de la mettre à jour)
         #
         # //Caractéristiques des barrières ---------------------------------
         #
@@ -66,9 +66,9 @@ associée à l'écriture de la valeur de chacune des variables
         #                      type_2 = 1 barrière variable affine, 
         #                      type_2 = 2 barrière variable exponentielle) type_2
 # //////////////////////////////////////////////////////////////////////////
-# // IMPORTANT : Si l'on utilise deux barrières, barrière 1 est celle de niveau le plus faible
-# // IMPORTANT : Si l'on utilise seulement une seule barrière, on remplit barrière 1 uniquement
-#                Seule barrière 1 sera lue, pas besoin de changer les valeurs de barrière 2
+IMPORTANT : Si l'on utilise deux barrières, barrière 1 est celle de niveau le plus faible
+IMPORTANT : Si l'on utilise seulement une seule barrière, on remplit barrière 1 uniquement
+                Seule barrière 1 sera lue, pas besoin de changer les valeurs de barrière 2
         #
         # //Caractéristiques barrière 1 ------------------------------------
         #
