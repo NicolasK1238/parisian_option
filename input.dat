@@ -1,0 +1,59 @@
+#////////////////////////////////////
+#//Projet Option Parisienne
+#////////////////////////////////////
+#
+#Nicolas Klaeylé - Timothée Fabre
+#Ce fichier contient toute les données d'input du programme
+#
+# //Caractéristiques de l'option -----------------------------------
+#
+0.001 //  Taux d'intéret (%) r
+#
+0.0 //  Taux de dividende (%) delta
+#
+0.2 //  Volatilité (%) sigma
+#
+1000 //  Valeur initiale (en cash) x
+# // IMPORTANT : Le pricing en Laplace n'est pas défini mathématiquement
+# //             si la valeur initiale franchit la barrière dès le départ
+#
+3 //  Maturité (en année) T
+#
+1000 //  Strike (en cash) K
+#
+-1 //  type_pc (type_pc = 1 pour Call, type_pc = -1 pour Put)
+#
+-1 //  type_ud (type_ud = 1 pour Up, type_ud = -1 pour Down)
+#
+1 //  type_io (type_io = 1 pour In, type_io = -1 pour Out)
+# // IMPORTANT : Pour les options à doubles barrières, la variable type_ud n'a plus d'importance
+#
+# //Caractéristiques des barrières ---------------------------------
+#
+1 //  nombre barrière (n = 1 simple barrière, n = 2 double barrière) n
+#
+0.05 // Delai, commun aux deux barrières (en année) d
+#
+0 //  type barrière 1 (type_1 = 0 barrière cst, type_1 = 1 barrière variable affine, type_1 = 2 barrière variable exponentielle) type_1
+#
+0 //  type barrière 2 (type_2 = 0 barrière cst, type_2 = 1 barrière variable affine, type_2 = 2 barrière variable exponentielle) type_2
+#
+# // IMPORTANT : Si deux barrières, barrière 1 est celle de niveau le plus faible
+# // IMPORTANT : Si une seule barrière, on remplit barrière 1 uniquement
+# // IMPORTANT : Si une seule barrière, pas besoin de changer les valeurs de barrière 2
+#
+# //Caractéristiques barrière 1 ------------------------------------
+#
+800// niveau barrière 1 constant (en cash / absolu) b1
+#
+0 //  Coeff a barrière affine/exponentielle a1 (absolu)
+#
+# //Caractéristiques barrière 2 ------------------------------------
+#
+1200// niveau barrière 2 constant (en cash / absolu) b2
+#
+0 //  Coeff a barrière affine/exponentielle a2 (absolu)
+# 
+# //Surface de prix ------------------------------------
+1  // spsd Surface de prix strike/délai (spsd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
+1  // spmd Surface de prix logmoneyness/délai (spmd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
