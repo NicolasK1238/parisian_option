@@ -49,48 +49,48 @@ associée à l'écriture de la valeur de chacune des variables
         1 //  type_pc (type_pc = 1 pour Call, type_pc = -1 pour Put)
         1 //  type_ud (type_ud = 1 pour Up, type_ud = -1 pour Down)
         1 //  type_io (type_io = 1 pour In, type_io = -1 pour Out)
-# //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------
 IMPORTANT : Pour les options à doubles barrières, la variable 
                 type_ud n'a plus d'importance (pas besoin de la mettre à jour)
-        #
-        # //Caractéristiques des barrières ---------------------------------
-        #
+        
+         //Caractéristiques des barrières ---------------------------------
+        
         1 //  nombre barrière (n = 1 simple barrière, n = 2 double barrière) n
-        #
+        
         0.05 // Delai (appelé aussi fenetre dans le rapport), 
-        #       commun aux deux barrières (en année) d
+               commun aux deux barrières (en année) d
         0 //  type barrière 1 (type_1 = 0 barrière cst, 
-        #                      type_1 = 1 barrière variable affine, 
-        #                      type_1 = 2 barrière variable exponentielle) type_1
+                              type_1 = 1 barrière variable affine, 
+                              type_1 = 2 barrière variable exponentielle) type_1
         0 //  type barrière 2 (type_2 = 0 barrière cst, 
-        #                      type_2 = 1 barrière variable affine, 
-        #                      type_2 = 2 barrière variable exponentielle) type_2
-# //////////////////////////////////////////////////////////////////////////
+                              type_2 = 1 barrière variable affine, 
+                              type_2 = 2 barrière variable exponentielle) type_2
+----------------------------------------------------------------------------------
 IMPORTANT : Si l'on utilise deux barrières, barrière 1 est celle de niveau le plus faible
 IMPORTANT : Si l'on utilise seulement une seule barrière, on remplit barrière 1 uniquement
                 Seule barrière 1 sera lue, pas besoin de changer les valeurs de barrière 2
-        #
-        # //Caractéristiques barrière 1 ------------------------------------
-        #
+        
+         //Caractéristiques barrière 1 ------------------------------------
+        
         800// niveau barrière 1 constant (en cash / absolu) b1
         0 //  Coeff a barrière affine/exponentielle a1 (absolu)
-        #
-        # //Caractéristiques barrière 2 ------------------------------------
-        #
+        
+         //Caractéristiques barrière 2 ------------------------------------
+        
         1200// niveau barrière 2 constant (en cash / absolu) b2
         0 //  Coeff a barrière affine/exponentielle a2 (absolu)
-        # 
-        # //Surface de prix ------------------------------------
-# //////////////////////////////////////////////////////////////////////////
+         
+         //Surface de prix ------------------------------------
+----------------------------------------------------------------------------------
 IMPORTANT : Ce calcul prend du temps
 IMPORTANT : Le grid est centré sur les valeurs de strike/délai et vol/délai
                 initialisé plus haut
         0  // spsd Surface de prix strike/délai 
-        #   (spsd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
+           (spsd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
         0  // spvd Surface de prix volatilité/délai 
-        #   (spvd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
+           (spvd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
         10 // taille du grid sur lequel on calcule la surface de prix
-# //////////////////////////////////////////////////////////////////////////
+----------------------------------------------------------------------------------
 IMPORTANT : Les données des surfaces de prix sont enregistrées dans des 
                 fichiers csv généré automatiquement
 ----------------------------------------------------------------------------------
