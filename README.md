@@ -1,8 +1,8 @@
 /////////////////////////////////////
-///Projet Option Parisienne - FR
+Projet Option Parisienne - FR
 /////////////////////////////////////
-//
-//Nicolas Klaeylé - Timothée Fabre
+
+Nicolas Klaeylé - Timothée Fabre
 
 README.txt
 Ce fichier décrit le fonctionnement du programme, ainsi que la règle de compilation
