@@ -13,24 +13,22 @@
 #
 0.2 //  Volatilité (%) sigma
 #
-1000 //  Valeur initiale (en cash) x
-# // IMPORTANT : Le pricing en Laplace n'est pas défini mathématiquement
-# //             si la valeur initiale franchit la barrière dès le départ
+120 //  Valeur initiale (en cash) x
 #
 3 //  Maturité (en année) T
 #
-1000 //  Strike (en cash) K
+100 //  Strike (en cash) K
 #
--1 //  type_pc (type_pc = 1 pour Call, type_pc = -1 pour Put)
+1 //  type_pc (type_pc = 1 pour Call, type_pc = -1 pour Put)
 #
--1 //  type_ud (type_ud = 1 pour Up, type_ud = -1 pour Down)
+1 //  type_ud (type_ud = 1 pour Up, type_ud = -1 pour Down)
 #
 1 //  type_io (type_io = 1 pour In, type_io = -1 pour Out)
 # // IMPORTANT : Pour les options à doubles barrières, la variable type_ud n'a plus d'importance
 #
 # //Caractéristiques des barrières ---------------------------------
 #
-1 //  nombre barrière (n = 1 simple barrière, n = 2 double barrière) n
+2 //  nombre barrière (n = 1 simple barrière, n = 2 double barrière) n
 #
 0.05 // Delai, commun aux deux barrières (en année) d
 #
@@ -44,16 +42,25 @@
 #
 # //Caractéristiques barrière 1 ------------------------------------
 #
-800// niveau barrière 1 constant (en cash / absolu) b1
+90// niveau barrière 1 constant (en cash / absolu) b1
 #
 0 //  Coeff a barrière affine/exponentielle a1 (absolu)
 #
 # //Caractéristiques barrière 2 ------------------------------------
 #
-1200// niveau barrière 2 constant (en cash / absolu) b2
+130// niveau barrière 2 constant (en cash / absolu) b2
 #
 0 //  Coeff a barrière affine/exponentielle a2 (absolu)
 # 
 # //Surface de prix ------------------------------------
+# // IMPORTANT : Ce calcul prend du temps
+# // IMPORTANT : Le grid est centré sur les valeurs de strike/délai et vol/délai
+#                initialisé plus haut
 1  // spsd Surface de prix strike/délai (spsd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
-1  // spmd Surface de prix logmoneyness/délai (spmd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
+1  // spvd Surface de prix volatilité/délai  (spvd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
+100  // taille du grid sur lequel on calcule la surface de prix (entier)
+# // IMPORTANT : Les données des surfaces de prix sont enregistrés dans des 
+#                fichiers csv généré automatiquement
+#
+# 
+#

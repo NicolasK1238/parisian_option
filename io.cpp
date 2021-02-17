@@ -36,7 +36,7 @@ using namespace std;
 void read_input (double& r, double& delta, double& sigma, double& x, double& T, double& K, \
                 int& type_pc, int& type_ud, int& type_io, double& d, int& n,  \
                 int& type_1, int& type_2, double& b1, double& a1, double& b2,  \
-                double& a2, int& spsd, int& spvd) 
+                double& a2, int& spsd, int& spvd, int& nbr) 
 {
     double val[23];
     int i=0;
@@ -74,6 +74,7 @@ void read_input (double& r, double& delta, double& sigma, double& x, double& T, 
     a2 = val[16];
     spsd = val[17];
     spvd = val[18];
+    nbr = val[19];
 
     return ;
 
@@ -140,6 +141,8 @@ void display_compilator(option par)
         
 
     }
+
+
 
 void write_csv(string res[],string name, int n)
 {

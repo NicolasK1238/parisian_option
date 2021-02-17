@@ -73,42 +73,6 @@ int combinaison(int p, int q)
         return fact(q) / ( fact(p) * fact(q-p) );
     };
 
-// Cette fonction vérifie que le calcul en Laplace est licite
-// La transformée de laplace d'un PDIC n'est défini que pour L <= x
-// La transformée de laplace d'un PUIC n'est défini que pour x <= L
-// De part le fonctionement du programme, cette limitation se transmet à l'évalutation de toute les fct
-
-void existence_check(option par, int type_ud)
-{
-    std::string option_tag = par.TAG2;
-
-    if (option_tag.compare("mono barrière")==0)
-    {
-        if (type_ud == 1 && par.x > par.b1) 
-            {
-                cout << "Le pricing en Laplace n'est pas défini pour cette combinaison (barrière - valeure initiale)"<<"\n";
-                cout << "Voir fichier READ_ME" << "\n";
-            } 
-        else if (type_ud == -1 && par.x < par.b1)        
-            {
-                cout << "Le pricing en Laplace n'est pas défini pour cette combinaison (barrière - valeure initiale)"<<"\n";
-                cout << "Voir fichier READ_ME" << "\n";
-            }
-    }
-    if (option_tag.compare("double barrière")==0)
-    {
-        if (par.x < par.b1 || par.x > par.b2) 
-            {
-                cout << "Le pricing en Laplace n'est pas défini pour cette combinaison ";
-                cout << "(barrière basse - valeure initiale - barrrière haute)"<<"\n";
-                cout << "Voir fichier READ_ME" << "\n";
-            } 
-    }
-    return;
-
-}
-
-
 
 // Les fcts ci dessous servent uniquement à harmonisé les notations entre le code MC et le code Laplace
 

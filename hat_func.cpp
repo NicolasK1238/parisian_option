@@ -273,16 +273,6 @@ std::complex<double> puic_hat_inf(option par, std::complex<double> lambda,int wh
 
 // Gestion DPOC-DPIC ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::complex<double> a_hat(option par, std::complex<double> lambda)
-    {
-        std::complex<double> res;
-
-        res = first_minus(par,lambda)*second_plus(par,1,lambda)*puic_hat_sup(par,lambda,2) +
-        first_plus(par,lambda)*second_minus(par,2,lambda)*pdic_hat_inf(par,lambda,1);
-
-        return res;
-    }
-
 std::complex<double> pdic_hat(option par, std::complex<double> lambda,int which_one)
     {
         double b = par.b_(which_one);
@@ -307,6 +297,15 @@ std::complex<double> puic_hat(option par, std::complex<double> lambda,int which_
             {
                 return puic_hat_inf(par,lambda,which_one);                
             }
+    }
+
+std::complex<double> a_hat(option par, std::complex<double> lambda)
+    {
+        std::complex<double> res;
+
+        res = first_minus(par,lambda)*second_plus(par,1,lambda)*puic_hat_sup(par,lambda,2) +
+        first_plus(par,lambda)*second_minus(par,2,lambda)*pdic_hat_inf(par,lambda,1);
+        return res;
     }
 
 std::complex<double> dpoc_hat(option par, std::complex<double> lambda, int which_one)

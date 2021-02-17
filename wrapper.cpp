@@ -62,9 +62,6 @@ double price_laplace(option par, int type_ud)
             return 0;
         }
 
-        existence_check(par,type_ud);
-
-
         // On cherche à présent à appeler une subroutine de pricing pour chacun des types d'options
         // On appelle les fonction tag par tag
 
