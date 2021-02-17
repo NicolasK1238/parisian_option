@@ -82,17 +82,17 @@ IMPORTANT : Si l'on utilise seulement une seule barrière, on remplit barrière 
         # 
         # //Surface de prix ------------------------------------
 # //////////////////////////////////////////////////////////////////////////
-# // IMPORTANT : Ce calcul prend du temps
-# // IMPORTANT : Le grid est centré sur les valeurs de strike/délai et vol/délai
-#                initialisé plus haut
+IMPORTANT : Ce calcul prend du temps
+IMPORTANT : Le grid est centré sur les valeurs de strike/délai et vol/délai
+                initialisé plus haut
         0  // spsd Surface de prix strike/délai 
         #   (spsd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
         0  // spvd Surface de prix volatilité/délai 
         #   (spvd = 1 si l'on souhaite calculer la surface de prix, 0 sinon)
         10 // taille du grid sur lequel on calcule la surface de prix
 # //////////////////////////////////////////////////////////////////////////
-# // IMPORTANT : Les données des surfaces de prix sont enregistrées dans des 
-#                fichiers csv généré automatiquement
+IMPORTANT : Les données des surfaces de prix sont enregistrées dans des 
+                fichiers csv généré automatiquement
 ----------------------------------------------------------------------------------
 Rôle des différents fichiers du programme
 
